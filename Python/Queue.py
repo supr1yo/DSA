@@ -20,6 +20,16 @@ class Queue:
         else:
             print(f'Deleted element: {self.queue.pop(0)}')
     
+    def rear(self):
+        '''
+        This operation returns the element at the rear end without removing it
+        '''
+        print('Operation: Rear')
+        if len(self.queue) < 1:
+            print('Empty queue. Unable to perform dequeue.')
+        else:
+            print(f'Rear element: {self.queue[len(self.queue) - 1]}')
+    
     def display(self):
         '''Displaying the queue contents'''
         print(f'Queue contents: {self.queue}')
