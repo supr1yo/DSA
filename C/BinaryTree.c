@@ -7,7 +7,13 @@ typedef struct Node {
     struct Node *right;
 } Node;
 
+void preOrder(Node *node) {
+    if(node == NULL) return;
 
+    print(node->data);
+    preOrder(node->left);
+    preOrder(node->right);
+}
 
 int main() {
  
