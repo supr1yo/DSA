@@ -21,7 +21,24 @@ class LinkedList:
             current = current.next
         current.next = new_node
     
-    # Display
+    # Insert at first
+    def insert_at_first(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    # Insert at last
+    def insertAtLast(self, data):
+        newNode = Node(data)
+
+        current = self.head
+
+        while current.next:
+            current = current.next
+        current.next = newNode
+
+
+    # Display the linked list
     def display(self):
         current = self.head
 
